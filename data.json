@@ -28,11 +28,11 @@
     "været misundelig på en vens succes uden at ønske dem tillykke.",
     "løjet om en anden persons karakter for at få dem til at fremstå dårligere.",
     "slettet beskeder for at skjule noget for en partner eller ven.",
-    "Røget en pakke smøger på en dag"
+    "Røget en pakke smøger på en dag",
+    ""
   ],
   "category": [
     "ølmærker",
-    "dyr",
     "bilmærker",
     "sportsgrene",
     "Byer i Danmark",
@@ -49,20 +49,20 @@
     "lande i europa"
   ],
   "mostLikelyTo": [
-    "til at glemme deres taske et sted",
-    "til at blive fanget i en Frank Hvam situation",
-    "til at sige noget pinligt til en fest",
-    "til at gå forkert ind i en fremmeds bil",
-    "til at forsvinde fra festen uden at sige farvel",
-    "til at stå op og holde en tale uden opfordring",
-    "til at skrive til sine gamle klassekammerater klokken 3 om natten",
-    "til at skide i bukserne",
-    "til at overdrive en historie til uigenkendelighed",
-    "til at købe noget under pres fra en sælger",
-    "til at falde i søvn i offentligheden",
-    "til at prøve at snige sig med i et VIP-område",
-    "til at spilde noget på sig selv til en vigtig begivenhed",
-    "til at blive influencer"
+    "at glemme deres taske et sted",
+    "at blive fanget i en Frank Hvam situation",
+    "at sige noget pinligt til en fest",
+    "at gå forkert ind i en fremmeds bil",
+    "at forsvinde fra festen uden at sige farvel",
+    "at stå op og holde en tale uden opfordring",
+    "at skrive til sine gamle klassekammerater klokken 3 om natten",
+    "at skide i bukserne",
+    "at overdrive en historie til uigenkendelighed",
+    "at købe noget under pres fra en sælger",
+    "at falde i søvn i offentligheden",
+    "at prøve at snige sig med i et VIP-område",
+    "at spilde noget på sig selv til en vigtig begivenhed",
+    "at blive influencer"
   ],
 
   "bonusMessages": [
@@ -80,6 +80,7 @@
     "BONUS: Den person med de største sko må give 2 slurke ud",
     "BONUS: Hvis du har spist en slasket kebab indenfor de sidste tre dage, tag en slurk",
     "BONUS: Personen med kortest hår må give 3 slurke ud",
-    "BONUS: FÆLLESSKÅL! Sidste person, der råber ‘drik!’, skal tage en ekstra slurk"
+    "BONUS: FÆLLESSKÅL! Sidste person, der råber ‘drik!’, skal tage en ekstra slurk",
+    "BONUS: Der er intet bedre end et slag vandfald. Sæt i gang!"
   ]
 }
