@@ -20,25 +20,24 @@ fetch('data.json')
     })
     .catch(error => console.error("Error fetching questions:", error));
 
+let touchCounter = 0
 let easterEggInput = ""; // indeholder keystroke inputtet for easteregget.
 let unhingedModeActivated = false;
+getHiddenButton = document.getElementById("hiddenButton")
 
-document.addEventListener("touchstart", () => {
-    tapCount++;
 
-    // Hvis brugeren har trykket tre gange hurtigt, aktiverer vi easter egg
-    if (tapCount === 3) {
+getHiddenButton.addEventListener("touchstart", () => {
+    touchCounter++;
+
+    if (touchCounter >= 5) { // denne aktiverer easteregget efter 5 hurtige tryk på skærmen.
         unlockUnhingedMode();
-        tapCount = 0; // Nulstil tap count efter aktivering
+        touchCounter = 0; // tælleren resettes.
     }
 
-    // Nulstil tap count efter en kort forsinkelse, hvis der ikke er flere hurtige tryk
-    if (tapTimer) {
-        clearTimeout(tapTimer);
-    }
-    tapTimer = setTimeout(() => {
-        tapCount = 0;
-    }, 500); // Taps skal ske inden for 500ms
+    // Reset touchCounter after 1 second to require fast taps
+    setTimeout(() => {
+        touchCounter = 0;
+    }, 1000);
 });
 
 function unlockUnhingedMode() {
