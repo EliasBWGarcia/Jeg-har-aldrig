@@ -26,7 +26,7 @@ let unhingedModeActivated = false;
 getHiddenButton = document.getElementById("hiddenButton")
 
 
-const holdDuration = 2000;
+const holdDuration = 500;
 
 getHiddenButton.addEventListener("touchstart", () => {
     // Start the timer when touch starts
