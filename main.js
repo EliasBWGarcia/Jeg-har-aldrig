@@ -21,7 +21,7 @@ fetch('data.json')
     .catch(error => console.error("Error fetching questions:", error));
 
 let holdTimer = 0
-let easterEggInput = ""; // indeholder keystroke inputtet for easteregget.
+let easterEggInput = "";
 let unhingedModeActivated = false;
 getHiddenButton = document.getElementById("hiddenButton")
 
@@ -30,14 +30,14 @@ const holdDuration = 500;
 
 getHiddenButton.addEventListener("touchstart", (event) => {
     event.preventDefault();
-    // Start the timer when touch starts
+    // dette starter timeren når knappen bliver holdt inde.
     holdTimer = setTimeout(() => {
         unlockUnhingedMode();
     }, holdDuration);
 });
 
 getHiddenButton.addEventListener("touchend", () => {
-    // Clear the timer if touch ends before hold duration is reached
+    // dette stopper timeren, hvis knappen bliver holdt inde i mindre end 500ms.
     clearTimeout(holdTimer);
 });
 
