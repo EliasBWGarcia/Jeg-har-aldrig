@@ -28,8 +28,7 @@
     "været misundelig på en vens succes uden at ønske dem tillykke.",
     "løjet om en anden persons karakter for at få dem til at fremstå dårligere.",
     "slettet beskeder for at skjule noget for en partner eller ven.",
-    "Røget en pakke smøger på en dag",
-    ""
+    "taget en pakke snus på en aften"
   ],
   "category": [
     "ølmærker",
@@ -46,8 +45,12 @@
     "musikinstrumenter",
     "fodboldspillere",
     "bryghuse",
-    "lande i europa"
+    "lande i europa",
+    "fastfood kæder",
+    "lande i Europa",
+    "undskyldninger for at drikke øl."
   ],
+
   "mostLikelyTo": [
     "at glemme deres taske et sted",
     "at blive fanget i en Frank Hvam situation",
@@ -62,12 +65,30 @@
     "at falde i søvn i offentligheden",
     "at prøve at snige sig med i et VIP-område",
     "at spilde noget på sig selv til en vigtig begivenhed",
-    "at blive influencer"
+    "at blive influencer",
+    "at have sex med katte",
+    "at køre vanvidskørsel"
   ],
+
+  "unhinged": [
+    "hvad ville du helst: blive bollet af din far i røven eller bolle din far i røven. 1 slurk for at bolle, 2 slurke for at blive bollet",
+    "du har pikken i røven på din mor, og du har din fars pik i røven. Går du frem eller tilbage? 1 slurk for frem, 2 slurke for tilbage",
+    "ville du dræbe uden straf for 10m kroner? Hvis ja, så drik!",
+    "Ville du spise en levende edderkop for 10.000 kroner? Drik 1 slurk hvis ja, 2 slurke hvis nej",
+    "Du kan kun redde én: din far eller din browserhistorik. 1 slurk for far, 2 slurke for browserhistorik",
+    "har du nogensinde sendt et nøgenbillede til nogen? 1 slurk for ja, 2 slurke for nej",
+    "Ville du bytte kønsdele med en nær ven for en million kroner? Drik 1 slurk hvis ja, 2 hvis nej.",
+    "Ville du helst leve uden porno eller uden sociale medier? 1 slurk for porno, 2 for medierne.",
+    "Hvis du fik 100.000 kr. for at holde et stripshow foran dine bedsteforældre, ville du gøre det? Drik 1 slurk hvis ja, 2 hvis nej.",
+    "Ville du cykle en tur nøgen på 5 minutter i københavns myldretrafik for 50.000kr? Drik 1 slurk hvis ja, 2 hvis nej",
+    "Du er nødt til at skifte navn til 'Chris. P. Bacon' resten af livet, eller aldrig have sex igen. 1 slurk for Blomst, 2 for ingen sociale medier.",
+    "Du får en million kroner, men skal have en penistatovering op ad halsen. Drik 1 slurk hvis ja, 4 hvis nej. Fuck dig"
+  ],
+
 
   "bonusMessages": [
     "BONUS: Du må udpege en person til at hente (reserve)øl til bordet",
-    "BONUS: Din makker til højre må give 2 slurke ud",
+    "BONUS: den der læser denne besked op må give 2 slurke ud. Det må din makker til venstre også.",
     "BONUS: Vælg en person, der må give 3 slurke ud",
     "BONUS: Alle med et ur på venstre hånd skal tage 2 slurke",
     "BONUS: Udpeg en person, der skal tage 1 slurk ud for hver farve på deres tøj",

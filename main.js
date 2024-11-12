@@ -4,7 +4,8 @@ let questions = {
     neverHaveIEver: [],
     category: [],
     mostLikelyTo: [],
-    bonusMessages: []
+    bonusMessages: [],
+    unhinged: []
 };
 
 // Spørgsmålene bliver hentet ind fra JSON filen, og lagt ind i de ovenstående arrays.
@@ -15,8 +16,50 @@ fetch('data.json')
         questions.category = data.category;
         questions.mostLikelyTo = data.mostLikelyTo;
         questions.bonusMessages = data.bonusMessages;
+        questions.unhinged = data.unhinged;
     })
     .catch(error => console.error("Error fetching questions:", error));
+
+let easterEggInput = ""; // indeholder keystroke inputtet for easteregget.
+let unhingedModeActivated = false;
+
+document.addEventListener("touchstart", () => {
+    tapCount++;
+
+    // Hvis brugeren har trykket tre gange hurtigt, aktiverer vi easter egg
+    if (tapCount === 3) {
+        unlockUnhingedMode();
+        tapCount = 0; // Nulstil tap count efter aktivering
+    }
+
+    // Nulstil tap count efter en kort forsinkelse, hvis der ikke er flere hurtige tryk
+    if (tapTimer) {
+        clearTimeout(tapTimer);
+    }
+    tapTimer = setTimeout(() => {
+        tapCount = 0;
+    }, 500); // Taps skal ske inden for 500ms
+});
+
+function unlockUnhingedMode() {
+    unhingedModeActivated = true; // hvis unhingedmode er låst op, vil denne være true.
+    document.getElementById("mode-title").textContent = "UNHINGED MODE UNLOCKED!";}
+
+// denne funktion lytter efter keystrokes for at låse op for unhinged spørgsmål.
+document.addEventListener("keydown", (event) => {
+    easterEggInput += event.key.toLowerCase();
+
+    // denne tjekker om inputtet er lig "easteregg"
+    if (easterEggInput.includes("easteregg")) {
+        unlockUnhingedMode();
+        easterEggInput = ""; // nulstiller easteregg inputtet.
+    }
+
+    // denne laver en limit på inputtet, funktionen tjekker efter.
+    if (easterEggInput.length > 20) {
+        easterEggInput = easterEggInput.slice(-20);
+    }
+});
 
 // Når man trykker på en specifik gamemode, bliver alt nulstillet og gamemoden dukker op på h1
 document.getElementById("modeSelect").addEventListener("change", () => {
@@ -40,7 +83,7 @@ document.getElementById("modeSelect").addEventListener("change", () => {
     if (bonusDisplay) {
         bonusDisplay.textContent = "";
     } else if (result) {
-        result.textContent=""
+        result.textContent= ""
     }
 });
 
@@ -86,16 +129,21 @@ function randomChoice() {
         // Hvis der ikke er valgt en specifik tilstand, bruger vi standardfordelingen
         const randomMode = Math.random();
 
-        if (randomMode < 0.15) {
-            // Kategori (15% chance for at få denne gamemode)
+        if (randomMode >= 0.00 && randomMode <= 0.20) {
+            // Kategori (20% chance for at få denne gamemode)
             document.getElementById("mode-title").textContent = "Kategori..";
             selectedQuestion = selectAndRemoveQuestion(questions.category);
-        } else if (randomMode < 0.4) {
-            // Hvem er mest tilbøjelig til (30% chance for at få denne gamemode)
+        } else if (randomMode >= 0.21 && randomMode <= 0.40) {
+            // Hvem er mest tilbøjelig til (19% chance for at få denne gamemode)
             document.getElementById("mode-title").textContent = "Hvem er mest tilbøjelig til..";
             selectedQuestion = selectAndRemoveQuestion(questions.mostLikelyTo);
-        } else {
-            // Jeg har aldrig (55% chance for at få denne gamemode)
+        } else if (unhingedModeActivated && randomMode >= 0.41 && randomMode <= 0.60) {
+            // Hvis easteregg er aktiveret , er der en 19% chance for, at få denne gamemode)
+            document.getElementById("mode-title").textContent = "UNHINGED";
+            selectedQuestion = selectAndRemoveQuestion(questions.unhinged);
+        }
+        else {
+            // Jeg har aldrig (40% chance for at få denne gamemode)
             document.getElementById("mode-title").textContent = "Jeg har aldrig..";
             selectedQuestion = selectAndRemoveQuestion(questions.neverHaveIEver);
         }
@@ -113,7 +161,7 @@ function randomChoice() {
     }
 
     // Der er kun 25% chance for at få en bonusbesked, så længe der stadig er elementer i det sorterede array.
-    if (Math.random() <= 0.25 && questions.bonusMessages.length > 0) {
+    if (Math.random() <= 0.50 && questions.bonusMessages.length > 0) {
         showDrinkMessage();
     }
 
@@ -122,7 +170,7 @@ function randomChoice() {
         // Denne sortere allerede viste bonusbeskeder vha. funktionen. Vi bruger denne nye array med de sorterede bonusbeskeder senere i koden.
         const bonusMessage = selectAndRemoveQuestion(questions.bonusMessages);
 
-        // Hvis ID elementet allerede eksisterer, gemmes det i variablen 'bonusDisplay'; hvis det ikke findes, oprettes et nyt 'div'-element i stedet.
+        // Hvis ID elementet allerede eksisterer, gemmes det i variablen 'bonusDisplay'
         const bonusDisplay = document.getElementById("drinkMessage");
 
         // Dette sætter tekstindholdet for bonusDisplay til den tilfældige bonusbesked (se variablen bonusMessage).

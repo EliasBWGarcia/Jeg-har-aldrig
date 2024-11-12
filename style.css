@@ -9,10 +9,13 @@ body {
     color: #f4f4f4;
     margin: 0;
     text-align: center;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 4em;
     margin-bottom: 0.5em;
     color: #f4b400;
 }
@@ -29,7 +32,7 @@ h1 {
 }
 
 #result {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     color: #4a90e2;
     height: 1.5em;
@@ -44,7 +47,7 @@ h1 {
     justify-content: center;
     align-items: center;
     color: #ffcc00;
-    font-size: 1.2em;
+    font-size: 2em;
     visibility: hidden;
     opacity: 0;
     animation: fadeIn 3s forwards;
@@ -57,7 +60,7 @@ h1 {
 
 button {
     padding: 10px 20px;
-    font-size: 1.1em;
+    font-size: 1.6em;
     color: #ffffff;
     background-color: #4a90e2;
     border: none;
@@ -80,7 +83,7 @@ button:active {
 
 #modeSelect {
     padding: 10px 20px;
-    font-size: 1.1em;
+    font-size: 1.6em;
     color: #ffffff;
     background-color: #4a90e2;
     border: none;
@@ -90,13 +93,13 @@ button:active {
     -webkit-appearance: none;
     -moz-appearance: none;
     line-height: normal;
-    height: 45px;
+    height: 50px;
     text-align-last: center;
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 25px; /* 20px fra toppen */
-    left: 20px; /* 20px fra venstre */
+    top: 25px;
+    left: 20px;
 
 }
 
