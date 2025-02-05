@@ -16,7 +16,7 @@ fetch('data.json')
         questions.category = data.category;
         questions.mostLikelyTo = data.mostLikelyTo;
         questions.bonusMessages = data.bonusMessages;
-        questions.unhinged = data.unhinged;
+       // questions.unhinged = data.unhinged;
     })
     .catch(error => console.error("Error fetching questions:", error));
 
@@ -43,7 +43,7 @@ getHiddenButton.addEventListener("touchend", () => {
 
 
 function unlockUnhingedMode() {
-    unhingedModeActivated = true; // hvis unhingedmode er låst op, vil denne være true.
+    unhingedModeActivated = true; // hvis unhingedmode er låst op, vil denne være true. Skal bruges lidt længere nede.
     document.getElementById("mode-title").textContent = "UNHINGED MODE UNLOCKED!";}
 
 // denne funktion lytter efter keystrokes for at låse op for unhinged spørgsmål.
